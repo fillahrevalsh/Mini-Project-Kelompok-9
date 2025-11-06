@@ -39,9 +39,5 @@ Cara kerja program ini adalah :
 -  ....
 -  ....
 
-
-## 🖥 Cara Menjalankan Program
-1. Pastikan sudah terinstal compiler C (contoh: gcc)
-2. Clone repository ini:
-   ```bash
-   git clone https://github.com/username/tabungan-keuangan.git
+## Link repository
+git clone https://github.com/username/tabungan-keuangan.git
