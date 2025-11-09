@@ -13,3 +13,18 @@ void tampilkanMenu() {
     cout << "================================" << endl;
 
 }
+void setorUang(int saldo[], int hari){
+    if (hari >= MAX_HARI) {
+        cout << "Sudah mencapai batas maksimal hari penyimpanan." << endl;
+        return;
+    }
+    int jumlah;
+    cout << "Masukkan jumlah setor uang hari ke-" << hari + 1 << ": ";
+    cin >> jumlah;
+    if (jumlah < 0) {
+        cout << "Jumlah uang tidak boleh negatif." << endl;
+        return;
+    }
+    saldo[hari] = jumlah;
+    cout << "Uang berhasil disetor." << endl;
+}
