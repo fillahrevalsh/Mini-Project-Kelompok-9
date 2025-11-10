@@ -16,6 +16,7 @@ void tampilkanMenu() {
     cout << "================================" << endl;
 
 }
+
 void setorUang(int saldo[], int hari){
     if (hari >= MAX_HARI) {
         cout << "Sudah mencapai batas maksimal hari penyimpanan." << endl;
@@ -31,6 +32,7 @@ void setorUang(int saldo[], int hari){
     saldo[hari] = jumlah;
     cout << "Uang berhasil disetor." << endl;
 }
+
 void daftarListTabungan(int saldo[], int jumlahHari) {
     cout << "\n================================" << endl;
     cout << "       DAFTAR LIST TABUNGAN     " << endl;
