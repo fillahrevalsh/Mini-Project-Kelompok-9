@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+const int MAX_HARI = 30;
+
 void tampilkanMenu() {
     cout << "================================" << endl;
     cout << "     PROGRAM TABUNGAN HARIAN    " << endl;
@@ -9,7 +11,8 @@ void tampilkanMenu() {
     cout << "2. Tarik Uang" << endl;
     cout << "3. Total & Rata-rata Saldo" << endl;
     cout << "4. Tabungan Terbesar & Terkecil" << endl;
-    cout << "5. Keluar" << endl;
+    cout << "5. Daftar List Tabungan" << endl;
+    cout << "6. Keluar" << endl;
     cout << "================================" << endl;
 
 }
@@ -28,3 +31,20 @@ void setorUang(int saldo[], int hari){
     saldo[hari] = jumlah;
     cout << "Uang berhasil disetor." << endl;
 }
+void daftarListTabungan(int saldo[], int jumlahHari) {
+    cout << "\n================================" << endl;
+    cout << "       DAFTAR LIST TABUNGAN     " << endl;
+    cout << "================================" << endl;
+
+    if (jumlahHari == 0) {
+        cout << "Belum ada data tabungan." << endl;
+        return;
+    }
+
+    for (int i = 0; i < jumlahHari; i++) {
+        cout << "Hari ke-" << i + 1 << " : Rp " << saldo[i] << endl;
+    }
+
+    cout << "================================" << endl;
+}
+
