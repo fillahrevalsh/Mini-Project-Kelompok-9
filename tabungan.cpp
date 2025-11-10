@@ -49,4 +49,57 @@ void daftarListTabungan(int saldo[], int jumlahHari) {
 
     cout << "================================" << endl;
 }
+void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
+     if (jumlahHari == 0) {
+        cout << "Belum ada data tabungan." << endl;
+        return;
+    }
+
+    int total = 0;
+    for (int i = 0; i < jumlahHari; i++) {
+        total += saldo[i];
+    }
+
+    double rata = static_cast<double>(total) / jumlahHari;
+
+    cout << "\n================================" << endl;
+    cout << "     TOTAL & RATA-RATA SALDO    " << endl;
+    cout << "================================" << endl;
+    cout << "Total Tabungan : Rp " << total << endl;
+    cout << "Rata-rata per Hari : Rp " << rata << endl;
+    cout << "================================" << endl;
+}
+int main() {
+    int saldo[MAX_HARI];
+    int jumlahHari = 0;
+    int pilihan;
+
+    do {
+        tampilkanMenu();
+        cout << "Pilih menu (1-6): ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                setorUang(saldo, jumlahHari);
+                jumlahHari++;
+                break;
+            case 3:
+                tampilkanTotalDanRataRata(saldo, jumlahHari);
+                break;
+            case 5:
+                daftarListTabungan(saldo, jumlahHari);
+                break;
+            case 6:
+                cout << "Terima kasih telah menggunakan program ini!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid." << endl;
+        }
+    } while (pilihan != 6);
+
+    return 0;
+}
+
+
 
