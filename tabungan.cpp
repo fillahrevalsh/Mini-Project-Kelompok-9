@@ -91,7 +91,7 @@ int main() {
                 daftarListTabungan(saldo, jumlahHari);
                 break;
             case 6:
-                cout << "Terima kasih telah menggunakan program ini!" << endl;
+                cout << "Terima kasih telah menggunakan program tabungan ini!" << endl;
                 break;
             default:
                 cout << "Pilihan tidak valid." << endl;
@@ -100,6 +100,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
