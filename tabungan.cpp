@@ -8,21 +8,22 @@ void tampilkanMenu() {
     cout << "     PROGRAM TABUNGAN HARIAN    " << endl;
     cout << "================================" << endl;
     cout << "1. Setor Uang" << endl;
-    cout << "2. Tarik Uang" << endl;
+    cout << "2. Daftar list tabungan" << endl;
     cout << "3. Total & Rata-rata Saldo" << endl;
-    cout << "4. Tabungan Terbesar & Terkecil" << endl;
-    cout << "5. Daftar List Tabungan" << endl;
-    cout << "6. Keluar" << endl;
+    cout << "4. Tabungan Terbesar & Terkecil" << endl;                                                                                                        cout << "0. Keluar" << endl;
     cout << "================================" << endl;
 
 }
 
 void setorUang(int saldo[], int hari){
+
+    int jumlah;
+
     if (hari >= MAX_HARI) {
         cout << "Sudah mencapai batas maksimal hari penyimpanan." << endl;
         return;
     }
-    int jumlah;
+
     cout << "Masukkan jumlah setor uang hari ke-" << hari + 1 << ": ";
     cin >> jumlah;
     if (jumlah < 0) {
@@ -49,6 +50,7 @@ void daftarListTabungan(int saldo[], int jumlahHari) {
 
     cout << "================================" << endl;
 }
+
 void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
      if (jumlahHari == 0) {
         cout << "Belum ada data tabungan." << endl;
@@ -69,14 +71,38 @@ void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
     cout << "Rata-rata per Hari : Rp " << rata << endl;
     cout << "================================" << endl;
 }
+
+void besarDanKecil(int saldo[], int jumlahHari) {
+
+int terbesar = saldo[0];
+    for (int i = 1; i < jumlahHari; i++) {
+        if (saldo[i] > terbesar) {
+            terbesar = saldo[i];
+        }
+    }
+
+
+int terkecil = saldo[0];
+    for (int i = 1; i < jumlahHari; i++) {
+        if (saldo[i] > terkecil) {
+            terkecil = saldo[i];
+        }
+    }
+
+    cout << "Saldo terbesar kamu adalah: " << terbesar << endl;
+    cout << "Saldo terkecil kamu adalah: " << terkecil << endl;
+}
+
+
 int main() {
     int saldo[MAX_HARI];
     int jumlahHari = 0;
     int pilihan;
 
     do {
+cout << endl; cout << endl; cout << endl;
         tampilkanMenu();
-        cout << "Pilih menu (1-6): ";
+        cout << "Pilih menu : ";
         cin >> pilihan;
 
         switch (pilihan) {
@@ -84,24 +110,22 @@ int main() {
                 setorUang(saldo, jumlahHari);
                 jumlahHari++;
                 break;
+            case 2:
+                daftarListTabungan(saldo, jumlahHari);
+                break;
             case 3:
                 tampilkanTotalDanRataRata(saldo, jumlahHari);
                 break;
-            case 5:
-                daftarListTabungan(saldo, jumlahHari);
+            case 4:
+                besarDanKecil(saldo, jumlahHari);
                 break;
-            case 6:
+            case 0:
                 cout << "Terima kasih telah menggunakan program tabungan ini!" << endl;
                 break;
             default:
-                cout << "Pilihan tidak valid." << endl;
+                cout << "Tidak ada di menu kak" << endl;
         }
-    } while (pilihan != 6);
+    } while (pilihan != 0);
 
     return 0;
 }
-
-
-
-
-
