@@ -29,7 +29,7 @@ Program ini sangat bermanfaat untuk kehidupan sehari-hari dalam mengatur keuanga
 | 2 | Irhab Bagas Dwi Prabowo | .... | ...... |
 | 3 | M. Farrel Jonata Pratama | ..... | ...... |
 | 4 | asyifaaaaaa) | ..... | ....... |
-| 5 | Putri Faradilah | .... | ....... |
+| 5 | Putri Faradilah | .... | Daftar List Tabungan |
 
 
 ## 🧠 Konsep Program
