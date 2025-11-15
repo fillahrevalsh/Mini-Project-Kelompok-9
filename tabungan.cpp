@@ -30,6 +30,23 @@ void setorUang(int saldo[], int hari){
 
 }
 
+
+void daftarListTabungan(int saldo[], int jumlahHari) {
+    cout << "\n================================" << endl;
+    cout << "       DAFTAR LIST TABUNGAN     " << endl;
+    cout << "================================" << endl;
+
+    if (jumlahHari == 0) {                                                                                                                                        cout << "Belum ada data tabungan." << endl;
+        return;
+    }
+
+    for (int i = 0; i < jumlahHari; i++) {
+        cout << "Hari ke-" << i + 1 << " : Rp " << saldo[i] << endl;
+    }
+
+    cout << "================================" << endl;
+}
+
 int main() {
     int saldo[7];
     int jumlahHari = 0;
@@ -44,10 +61,12 @@ cout << endl; cout << endl; cout << endl;
         cin >> pilihan;
 
         switch (pilihan) {
-            case 1:                                                                                               setorUang(saldo, jumlahHari);
+            case 1:
+                setorUang(saldo, jumlahHari);
                 jumlahHari++;
                 break;
-
+            case 2:
+                daftarListTabungan(saldo, jumlahHari);
             case 0:
                 cout << "Makasih bro udah make" << endl;
                 break;
