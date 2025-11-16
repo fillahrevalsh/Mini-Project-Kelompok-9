@@ -36,7 +36,8 @@ void daftarListTabungan(int saldo[], int jumlahHari) {
     cout << "       DAFTAR LIST TABUNGAN     " << endl;
     cout << "================================" << endl;
 
-    if (jumlahHari == 0) {                                                                                                                                        cout << "Belum ada data tabungan." << endl;
+    if (jumlahHari == 0) {
+        cout << "Belum ada data tabungan." << endl;
         return;
     }
 
@@ -44,6 +45,27 @@ void daftarListTabungan(int saldo[], int jumlahHari) {
         cout << "Hari ke-" << i + 1 << " : Rp " << saldo[i] << endl;
     }
 
+    cout << "================================" << endl;
+}
+
+void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
+     if (jumlahHari == 0) {
+        cout << "Belum ada data tabungan." << endl;
+        return;
+    }
+
+    int total = 0;
+    for (int i = 0; i < jumlahHari; i++) {
+        total += saldo[i];
+    }
+
+    double rata = static_cast<double>(total) / jumlahHari;
+
+    cout << "\n================================" << endl;
+    cout << "     TOTAL & RATA-RATA SALDO    " << endl;
+    cout << "================================" << endl;
+    cout << "Total Tabungan : Rp " << total << endl;
+    cout << "Rata-rata per Hari : Rp " << rata << endl;
     cout << "================================" << endl;
 }
 
