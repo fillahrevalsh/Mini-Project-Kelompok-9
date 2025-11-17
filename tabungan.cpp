@@ -69,6 +69,27 @@ void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
     cout << "================================" << endl;
 }
 
+void besarDanKecil(int saldo[], int jumlahHari) {
+
+int terbesar = saldo[0];
+    for (int i = 1; i < jumlahHari; i++) {
+        if (saldo[i] > terbesar) {
+            terbesar = saldo[i];
+        }
+    }
+
+
+int terkecil = saldo[0];
+    for (int i = 1; i < jumlahHari; i++) {
+        if (saldo[i] > terkecil) {
+            terkecil = saldo[i];
+        }
+    }
+
+    cout << "Saldo terbesar kamu adalah: " << terbesar << endl;
+    cout << "Saldo terkecil kamu adalah: " << terkecil << endl;
+}
+
 int main() {
     int saldo[7];
     int jumlahHari = 0;
@@ -96,6 +117,5 @@ cout << endl; cout << endl; cout << endl;
                 cout << "Belum ada hehe";
 }
     } while (pilihan != 0);
-
-    return 0;
+                                                                                                                                                              return 0;
 }
