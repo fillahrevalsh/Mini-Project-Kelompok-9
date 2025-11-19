@@ -33,29 +33,17 @@ Program ini sangat bermanfaat untuk kehidupan sehari-hari dalam mengatur keuanga
 
 ---
 
-## 🧩 Fitur Utama (Menu Program)
-1. ....
-2. ....
-3. ....
-4. ....
 
 ## ⚙ Pembagian Tugas Kelompok
 
 | No | Nama Anggota | Tugas | Fitur / Menu |
 |----|---------------|-------|---------------|
-| 1 | Reval Fillah Shahada | tidur, ngopi | ...... |
-| 2 | Irhab Bagas Dwi Prabowo | .... | ...... |
-| 3 | M. Farrel Jonata Pratama | ..... | ...... |
-| 4 | asyifaaaaaa) | ..... | ....... |
-| 5 | Putri Faradilah | .... | Daftar List Tabungan |
+| 1 | Reval Fillah Shahada | Membuat function terbesar dan terkexil | Terbesar dan Terkecil |
+| 2 | Irhab Bagas Dwi Prabowo | Membuat function rata-rata dan total tabungan | Total dan Rata - rata|
+| 3 | M. Farrel Jonata Pratama | Membuat function opening list program | Opening |
+| 4 | asyifaaaaaa | Membuat function setor uang | Setor uang |
+| 5 | Putri Faradilah | Membuat function daftar list tabungan| Daftar List Tabungan 
 
-
-## 🧠 Konsep Program
-Cara kerja program ini adalah :
--  ....
--  ....
--  ....
--  ....
 
 ## Link repository
-git clone https://github.com/username/tabungan-keuangan.git
+https://github.com/username/tabungan-keuangan.git
