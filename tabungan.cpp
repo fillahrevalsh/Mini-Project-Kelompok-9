@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int satuBulan = 30;
+
 void tampilkanMenu() {
     cout << "================================" << endl;
     cout << "     PROGRAM TABUNGAN HARIAN    " << endl;
@@ -17,28 +19,30 @@ void tampilkanMenu() {
 void setorUang(int saldo[], int hari){
 
     int jumlah;
+
+    if (hari >= satuBulan) {
+        cout << "Sudah mencapai batas maksimal hari penyimpanan." << endl;
+
+    }
+
     cout << "Masukkan jumlah setor uang hari ke-" << hari + 1 << ": ";
     cin >> jumlah;
 
     if (jumlah < 0) {
         cout << "Jumlah uang tidak boleh negatif." << endl;
-        return;
     }
 
     saldo[hari] = jumlah;
     cout << "Uang berhasil disetor." << endl;
-
 }
 
-
 void daftarListTabungan(int saldo[], int jumlahHari) {
-    cout << "\n================================" << endl;
+    cout << "================================" << endl;
     cout << "       DAFTAR LIST TABUNGAN     " << endl;
     cout << "================================" << endl;
 
     if (jumlahHari == 0) {
         cout << "Belum ada data tabungan." << endl;
-        return;
     }
 
     for (int i = 0; i < jumlahHari; i++) {
@@ -51,7 +55,6 @@ void daftarListTabungan(int saldo[], int jumlahHari) {
 void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
      if (jumlahHari == 0) {
         cout << "Belum ada data tabungan." << endl;
-        return;
     }
 
     int total = 0;
@@ -81,7 +84,7 @@ int terbesar = saldo[0];
 
 int terkecil = saldo[0];
     for (int i = 1; i < jumlahHari; i++) {
-        if (saldo[i] > terkecil) {
+        if (saldo[i] < terkecil) {
             terkecil = saldo[i];
         }
     }
@@ -90,15 +93,14 @@ int terkecil = saldo[0];
     cout << "Saldo terkecil kamu adalah: " << terkecil << endl;
 }
 
+
 int main() {
-    int saldo[7];
+    int saldo[satuBulan];
     int jumlahHari = 0;
     int pilihan;
 
     do {
-
 cout << endl; cout << endl; cout << endl;
-
         tampilkanMenu();
         cout << "Pilih menu : ";
         cin >> pilihan;
@@ -110,12 +112,21 @@ cout << endl; cout << endl; cout << endl;
                 break;
             case 2:
                 daftarListTabungan(saldo, jumlahHari);
+                break;
+            case 3:
+                tampilkanTotalDanRataRata(saldo, jumlahHari);
+                break;
+            case 4:
+                besarDanKecil(saldo, jumlahHari);
+                break;
             case 0:
-                cout << "Makasih bro udah make" << endl;
+                cout << "Terima kasih telah menggunakan program tabungan ini!" << endl;
                 break;
             default:
-                cout << "Belum ada hehe";
-}
+                cout << "Tidak ada di menu kak" << endl;
+                break;
+        }
     } while (pilihan != 0);
-                                                                                                                                                              return 0;
+
+    return 0;
 }
