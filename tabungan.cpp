@@ -62,7 +62,7 @@ void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
         total += saldo[i];
     }
 
-    double rata = static_cast<double>(total) / jumlahHari;
+    double rata = total / jumlahHari;
 
     cout << "\n================================" << endl;
     cout << "     TOTAL & RATA-RATA SALDO    " << endl;
