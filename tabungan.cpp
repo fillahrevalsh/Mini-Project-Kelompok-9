@@ -16,25 +16,23 @@ void tampilkanMenu() {
 
 }
 
-void setorUang(int saldo[], int hari){
+void setorUang(int saldo[], int jumlahHari)
+{
 
     int jumlah;
 
-    if (hari >= satuBulan) {
+    if (jumlahHari >= satuBulan)
+    {
         cout << "Sudah mencapai batas maksimal hari penyimpanan." << endl;
-
     }
 
-    cout << "Masukkan jumlah setor uang hari ke-" << hari + 1 << ": ";
+    cout << "Masukkan jumlah setor uang hari ke-" << jumlahHari << ": ";
     cin >> jumlah;
 
-    if (jumlah < 0) {
+    if (jumlah < 0)
+    {
         cout << "Jumlah uang tidak boleh negatif." << endl;
     }
-
-    saldo[hari] = jumlah;
-    cout << "Uang berhasil disetor." << endl;
-}
 
 void daftarListTabungan(int saldo[], int jumlahHari) {
     cout << "================================" << endl;
@@ -75,7 +73,7 @@ void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
 void besarDanKecil(int saldo[], int jumlahHari) {
 
 int terbesar = saldo[0];
-    for (int i = 1; i < jumlahHari; i++) {
+    for (int i = 0; i < jumlahHari; i++) {
         if (saldo[i] > terbesar) {
             terbesar = saldo[i];
         }
@@ -83,7 +81,7 @@ int terbesar = saldo[0];
 
 
 int terkecil = saldo[0];
-    for (int i = 1; i < jumlahHari; i++) {
+    for (int i = 0; i < jumlahHari; i++) {
         if (saldo[i] < terkecil) {
             terkecil = saldo[i];
         }
@@ -130,5 +128,6 @@ cout << endl; cout << endl; cout << endl;
 
     return 0;
 }
+
 
 
