@@ -26,7 +26,7 @@ void setorUang(int saldo[], int jumlahHari)
         cout << "Sudah mencapai batas maksimal hari penyimpanan." << endl;
     }
 
-    cout << "Masukkan jumlah setor uang hari ke-" << jumlahHari << ": ";
+    cout << "Masukkan jumlah setor uang hari ke-" << jumlahHari + 1 << ": ";
     cin >> jumlah;
 
     if (jumlah < 0)
@@ -128,6 +128,7 @@ cout << endl; cout << endl; cout << endl;
 
     return 0;
 }
+
 
 
 
