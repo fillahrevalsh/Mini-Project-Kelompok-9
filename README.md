@@ -38,7 +38,7 @@ Program ini sangat bermanfaat untuk kehidupan sehari-hari dalam mengatur keuanga
 
 | No | Nama Anggota | Tugas | Fitur / Menu |
 |----|---------------|-------|---------------|
-| 1 | Reval Fillah Shahada | Membuat sistem main utama | Terbesar dan Terkecil |
+| 1 | Reval Fillah Shahada | Membuat sistem main dan koreksi | Fungsi sistem main |
 | 2 | Irhab Bagas Dwi Prabowo | Membuat function rata-rata dan total tabungan | Total dan Rata - rata|
 | 3 | M. Farrel Jonata Pratama | Membuat function opening dan sistem Besar dan kecil | Opening, Besar dan kecil |
 | 4 | asyifaaaaaa | Membuat function setor uang | Setor uang |
