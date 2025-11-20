@@ -62,7 +62,7 @@ void tampilkanTotalDanRataRata (int saldo[], int jumlahHari) {
 
     double rata = total / jumlahHari;
 
-    cout << "\n================================" << endl;
+    cout << "================================" << endl;
     cout << "     TOTAL & RATA-RATA SALDO    " << endl;
     cout << "================================" << endl;
     cout << "Total Tabungan : Rp " << total << endl;
@@ -128,6 +128,7 @@ cout << endl; cout << endl; cout << endl;
 
     return 0;
 }
+
 
 
 
